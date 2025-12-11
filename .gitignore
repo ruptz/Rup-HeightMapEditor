@@ -1,0 +1,4 @@
+build/
+build_exe.bat
+dist/
+HeightMapEditor.spec

@@ -1,0 +1,4 @@
+pyinstaller>=6.3
+Pillow>=10
+numpy>=2.0
+sv-ttk>=2.6.0
