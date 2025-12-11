@@ -29,7 +29,16 @@ jobs:
       - name: Build exe
         shell: cmd
         run: |
-          .\build_exe.bat
+          if exist build rmdir /S /Q build
+          if exist dist rmdir /S /Q dist
+          if exist HeightMapEditor.spec del HeightMapEditor.spec
+          pyinstaller --noconfirm ^
+            --name HeightMapEditor ^
+            --onefile ^
+            --windowed ^
+            --icon OZyXBv0.ico ^
+            --add-data OZyXBv0.ico;. ^
+            height_tool_gui.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
