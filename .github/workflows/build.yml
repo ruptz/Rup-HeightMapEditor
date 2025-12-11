@@ -7,7 +7,10 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
   release:
-    types: [created]
+    types: [published]
+
+permissions:
+  contents: write
 
 jobs:
   build-windows:
@@ -60,5 +63,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: HeightMapEditor.exe
+          tag_name: ${{ github.event.release.tag_name }}
+          fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
