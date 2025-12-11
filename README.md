@@ -6,7 +6,7 @@ A desktop GUI to view, export, edit, and re-pack GTA V heightmap data. Supports 
 
 ## Features
 - Load HMAP `.dat` files and parse Max/Min arrays
-- Preview normalized Min/Max images with correct orientation
+- Preview normalized MinHeight/MaxHeight images with correct orientation
 - Export Min/Max to PNG or HEX text format
 - Convert edited PNGs back to HEX text
 - Update an existing `.dat` with edited Min or Max PNGs (headers and compression preserved)
