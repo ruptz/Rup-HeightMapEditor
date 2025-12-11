@@ -1,10 +1,12 @@
 name: Build Windows EXE
 
 on:
-  push:
-    branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+    paths:
+      - 'height_tool_gui.py'
+      - 'requirements.txt'
+      - '.github/workflows/build.yml'
   workflow_dispatch:
   release:
     types: [published]
@@ -14,6 +16,8 @@ permissions:
 
 jobs:
   build-windows:
+    # Only build the EXE for releases or manual dispatch
+    if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     runs-on: windows-latest
     steps:
       - name: Checkout
