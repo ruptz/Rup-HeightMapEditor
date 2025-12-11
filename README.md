@@ -14,8 +14,8 @@ A desktop GUI to view, export, edit, and re-pack GTA V heightmap data. Supports 
 
 ## Requirements
 - Windows, Python 3.11+
-- Packages: `Pillow`, `numpy`, `sv-ttk` (optional), `pyinstaller` for building
-- Standard library: `tkinter` (ships with Windows Python), `zlib`
+- Packages: `Pillow`, `numpy`, `sv-ttk`, `pyinstaller` for building
+- Standard library: `tkinter`, `zlib`
 
 Install dependencies:
 
@@ -40,15 +40,10 @@ build_exe.bat
 
 This produces `dist/HeightMapEditor.exe` using PyInstaller, bundles the app icon, and runs as a windowed executable (no console).
 
-### Notes about the icon
-- The executable file icon is set via `--icon`
-- The Tk window/dialog icon is loaded at runtime; the code checks `sys._MEIPASS` for PyInstaller onefile builds and falls back to the script directory otherwise
-- Ensure `OZyXBv0.ico` is located next to `height_tool_gui.py` in source; it is bundled via `--add-data` in the build script
-
 ## Usage Tips
 - Use the Browse button to select your `.dat`
-- Previews show normalized images for visual clarity (actual data range is reported in the status bar)
-- Export buttons save exactly the visual orientation; if you edit the PNG and want to re-pack, enable the "Apply Inverse" toggle so the app reverses preview transformations when converting/applying
+- Previews show normalized images for visual clarity
+- Export buttons save exactly the visual orientation, if you edit the PNG and want to re-pack, enable the "Apply Inverse" toggle so the app reverses preview transformations when converting/applying
 - Updating DAT validates array sizes against the original header and preserves compression layout
 
 ## Troubleshooting
@@ -58,13 +53,6 @@ This produces `dist/HeightMapEditor.exe` using PyInstaller, bundles the app icon
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements.txt
 	```
-- For antivirus false-positives on onefile executables, prefer `--onedir` in the builder or sign the exe
-
-## Repository Structure
-- `height_tool_gui.py`: main GUI application
-- `requirements.txt`: runtime + build dependencies
-- `build_exe.bat`: Windows build script using PyInstaller
-- `OZyXBv0.ico`: application icon
 
 ## License
 Proprietary or project-specific; add your preferred license here.
