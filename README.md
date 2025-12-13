@@ -1,6 +1,6 @@
 # GTAV HeightMap Editor
 
-A desktop GUI to view, export, edit, and re-pack GTA V heightmap data. Supports reading HMAP `.dat` files (Max/Min arrays) directly, previewing with orientation fixed, exporting PNG/HEX, and updating the original `.dat` with edited PNGs.
+A desktop GUI to view, export, edit, and re-pack GTA V heightmap data. Supports reading `heightmap.dat` files (Max/Min arrays) directly, previewing with orientation fixed, exporting PNG/HEX, and updating the original `.dat` with edited PNGs.
 
 <img width="1918" height="1032" alt="image" src="https://github.com/user-attachments/assets/c402e7d0-bdce-4700-b831-9547caed31c7" />
 
