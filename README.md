@@ -55,4 +55,4 @@ This produces `dist/HeightMapEditor.exe` using PyInstaller, bundles the app icon
 	```
 
 ## License
-Proprietary or project-specific; add your preferred license here.
+[license.md](https://github.com/ruptz/Rup-HeightMapEditor/edit/master/README.md)
